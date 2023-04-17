@@ -31,6 +31,7 @@
 // essential for tuple mutators, but there may be a (more complicated) way
 // to do without them
 #![feature(generic_associated_types)]
+#![feature(let_chains)]
 //
 // end nightly features
 //
