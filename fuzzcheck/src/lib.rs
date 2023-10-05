@@ -29,6 +29,8 @@
 // very very nice to use, but I guess not essential?
 #![feature(type_alias_impl_trait, impl_trait_in_assoc_type)]
 // should be stabilised very soon
+// essential for tuple mutators, but there may be a (more complicated) way
+// to do without them
 #![feature(let_chains)]
 //
 // end nightly features
