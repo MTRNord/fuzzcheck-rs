@@ -28,6 +28,7 @@
 #![feature(stmt_expr_attributes)]
 // very very nice to use, but I guess not essential?
 #![feature(type_alias_impl_trait)]
+#![feature(impl_trait_in_assoc_type)]
 // essential for tuple mutators, but there may be a (more complicated) way
 // to do without them
 #![feature(generic_associated_types)]
