@@ -63,6 +63,7 @@ pub mod fixed_len_vector;
 pub mod grammar;
 pub mod integer;
 pub mod integer_within_range;
+pub mod json;
 pub mod map;
 pub mod mutations;
 pub mod never;
