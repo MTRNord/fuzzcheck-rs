@@ -300,7 +300,7 @@ This should never happen, and is probably a bug in fuzzcheck. Sorry :("#
             format!("{:x}", hash)
         };
 
-        let path = artifacts_folder.join(&name).with_extension(extension);
+        let path = artifacts_folder.join(name).with_extension(extension);
         fs::write(&path, &content)?;
         println!("Failing test case found. Saving at {:?}", path);
 

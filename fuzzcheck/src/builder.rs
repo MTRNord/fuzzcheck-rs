@@ -424,7 +424,7 @@ where
         FuzzerBuilder3 {
             test_function: self.test_function,
             mutator: self.mutator,
-            serializer: Box::new(SerdeSerializer::<V>::default()),
+            serializer: Box::<SerdeSerializer<V>>::default(),
             _phantom: PhantomData,
         }
     }

@@ -180,7 +180,6 @@ impl<T> Slab<T> {
     pub fn keys(&self) -> impl Iterator<Item = SlabKey<T>> {
         let available_slots = self.available_slots.clone();
         (0..self.storage.len())
-            .into_iter()
             .filter(
                 #[coverage(off)]
                 move |i| !available_slots.contains(i),
@@ -336,7 +335,6 @@ impl<T> RcSlab<T> {
     #[coverage(off)]
     pub fn keys(&self) -> impl Iterator<Item = usize> + '_ {
         (0..self.storage.len())
-            .into_iter()
             .filter(move |i| !self.available_slots.contains(i))
     }
 }

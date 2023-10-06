@@ -120,7 +120,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                 address_sanitizer,
                 &profile,
                 !no_instrument_coverage,
-                &process::Stdio::inherit,
+                process::Stdio::inherit,
             )?;
             exec.wait_with_output()?;
         }
@@ -145,7 +145,7 @@ fn main() -> Result<(), Box<dyn Error>> {
                 address_sanitizer,
                 &profile,
                 !no_instrument_coverage,
-                &process::Stdio::inherit,
+                process::Stdio::inherit,
             )?;
             exec.wait_with_output()?;
         }

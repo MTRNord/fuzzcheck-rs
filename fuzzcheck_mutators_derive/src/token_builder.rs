@@ -287,7 +287,6 @@ pub fn generics_arg_by_mutating_type_params(
 ) -> AngleBracketedGenericArguments {
     let args = g
         .type_params()
-        .into_iter()
         .map(|tp| parse2::<GenericArgument>(f(tp.ident.clone())).unwrap())
         .collect();
 

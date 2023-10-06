@@ -1,3 +1,4 @@
+use js_int::UInt;
 use serde_json::{Number, Value};
 
 use super::bool::BoolMutator;
@@ -96,7 +97,9 @@ fn map_internal_jv_to_serde(internal: InternalJsonValue) -> Value {
     match internal {
         InternalJsonValue::Null => Value::Null,
         InternalJsonValue::Bool { inner } => Value::Bool(inner),
-        InternalJsonValue::Number { inner } => Value::Number(Number::from(inner)),
+        InternalJsonValue::Number { inner } => {
+            Value::Number(Number::from(u64::try_from(UInt::new_wrapping(inner)).unwrap()))
+        }
         InternalJsonValue::String { inner } => Value::String(inner),
         InternalJsonValue::Array { inner } => Value::Array(inner.into_iter().map(map_internal_jv_to_serde).collect()),
         InternalJsonValue::Object { inner } => Value::Object(

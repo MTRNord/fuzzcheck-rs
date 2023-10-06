@@ -210,7 +210,7 @@ impl Parse for MakeMutatorSettings {
                 x => {
                     return Err(Error::new(
                         ident.span(),
-                        &format!("{x} is not a valid setting of make_muattor"),
+                        format!("{x} is not a valid setting of make_muattor"),
                     ));
                 }
             }

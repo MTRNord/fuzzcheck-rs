@@ -318,7 +318,7 @@ impl Arguments {
         let stop_after_first_failure = matches.opt_present(STOP_AFTER_FIRST_FAILURE_FLAG);
 
         let defaults = DefaultArguments::default();
-        let max_input_cplx: f64 = max_input_cplx.unwrap_or(defaults.max_input_cplx as f64);
+        let max_input_cplx: f64 = max_input_cplx.unwrap_or(defaults.max_input_cplx);
         let corpus_in: Option<PathBuf> = if no_in_corpus.is_some() { None } else { corpus_in };
         let corpus_out: Option<PathBuf> = if no_out_corpus.is_some() { None } else { corpus_out };
 

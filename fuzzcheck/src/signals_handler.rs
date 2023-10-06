@@ -58,7 +58,7 @@ where
         SIGALRM, SIGINT, SIGTERM, SIGSEGV, SIGBUS, SIGABRT, SIGFPE, SIGABRT, SIGTRAP,
     ];
     for sig in signals {
-        if sigaction(sig as i32, &mut sa as *mut sigaction, ptr::null_mut()) < 0 {
+        if sigaction(sig, &mut sa as *mut sigaction, ptr::null_mut()) < 0 {
             panic!("Could not set up signal handler");
         }
     }
