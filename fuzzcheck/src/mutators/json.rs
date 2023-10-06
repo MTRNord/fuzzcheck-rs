@@ -9,6 +9,8 @@ use super::tuples::{Tuple2, Tuple2Mutator, TupleMutatorWrapper};
 use super::vector::VecMutator;
 use crate::{make_mutator, DefaultMutator, Mutator};
 
+extern crate self as fuzzcheck;
+
 pub type ValueMutator = impl Mutator<Value>;
 
 /// A Fuzzcheck mutator for [`serde_json::Value`].

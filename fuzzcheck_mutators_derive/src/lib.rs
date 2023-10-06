@@ -268,7 +268,7 @@ pub(crate) struct Common {
 impl Common {
     #[allow(non_snake_case)]
     fn new(n: usize) -> Self {
-        let mutators = ts!("fuzzcheck::mutators");
+        let mutators = ts!("::fuzzcheck::mutators");
         let ti = Box::new(|i: usize| ident!("t" i));
         let ti_value = Box::new(|i: usize| ident!("t" i "_value"));
         let Ti = Box::new(|i: usize| ident!("T" i));
