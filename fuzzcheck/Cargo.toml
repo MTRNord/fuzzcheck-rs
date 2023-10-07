@@ -49,7 +49,7 @@ js_int = "0.2.2"
 
 bit-vec = "0.6.3"
 rustc-demangle = "0.1.21"
-arbitrary-json = "0.1.1"
+arbitrary-json = { git = "https://github.com/PierreZ/arbitrary-json.git", rev = "10342ed76f1e0b6528ea59df5f40f0553f9c0ae2" }
 
 [lib]
 name = "fuzzcheck"
