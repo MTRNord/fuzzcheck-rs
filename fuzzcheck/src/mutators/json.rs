@@ -15,7 +15,7 @@ use crate::{make_mutator, DefaultMutator, Mutator};
 
 extern crate self as fuzzcheck;
 
-pub type ValueMutator = impl Mutator<ArbitraryValue>;
+pub type ValueMutator = impl Mutator<::arbitrary_json::ArbitraryValue>;
 
 /// A Fuzzcheck mutator for [`serde_json::Value`].
 ///
@@ -190,7 +190,7 @@ make_mutator! {
     }
 }
 
-impl DefaultMutator for ArbitraryValue {
+impl DefaultMutator for ::arbitrary_json::ArbitraryValue {
     type Mutator = ValueMutator;
 
     #[coverage(off)]
